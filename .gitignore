@@ -1,0 +1,36 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environments
+venv/
+env/
+*.egg-info/
+
+# Environment variable files
+.env
+
+# VS Code settings
+.vscode/
+
+# Jupyter notebooks (optional)
+.ipynb_checkpoints/
+
+# Logs and temporary files
+*.log
+*.tmp
+*.cache
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Results and outputs
+results/
+*.json
+
+# Ignore model weights (for Hugging Face or local LLaMA)
+*.bin
+*.pt
+checkpoints/
