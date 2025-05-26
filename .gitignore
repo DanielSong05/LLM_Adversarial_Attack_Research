@@ -26,10 +26,6 @@ env/
 .DS_Store
 Thumbs.db
 
-# Results and outputs
-results/
-*.json
-
 # Ignore model weights (for Hugging Face or local LLaMA)
 *.bin
 *.pt
