@@ -11,7 +11,7 @@ import time
 import asyncio
 import tiktoken
 from typing import Dict, List
-from model_factory import load_model
+from models.model_factory import load_model
 
 DATA_PATH = "data/cosafe_conversations.json"
 OUT_DIR = "results/raw"
