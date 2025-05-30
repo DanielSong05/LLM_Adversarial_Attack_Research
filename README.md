@@ -8,7 +8,7 @@ Investigating the Functional Robustness of Open- and Closed-Source models agains
 - Models: gpt-4-turbo, llama-3.3-70b-versatile, llama-3.1-8b-instant, claude-3-7-sonnet-20250219
 - Benchmarks: MHJ, CoSafe, BAD datasets
 - Attack types: Human-crafted, coreference, escalation
-- Compared open- and closed-source LLMs for safety, severity, and attack cost
+- Evaluation Critera: Attack Success Rate (ASR %), Severity (Toxicity Score), Adversarial (turn & token) cost
 
 ## References
 
