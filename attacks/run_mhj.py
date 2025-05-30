@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 """
 For efficiency and standardization, only conversations with 1-6 turns were included. 
-Model calls used a sliding window of the 6 most recent turns as context.
 """
 
 import os
