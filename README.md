@@ -4,6 +4,12 @@ Investigating the Functional Robustness of Open- and Closed-Source models agains
 
 ---
 
+## Overview
+- Models: gpt-4-turbo, llama-3.3-70b-versatile, llama-3.1-8b-instant, claude-3-7-sonnet-20250219
+- Benchmarks: MHJ, CoSafe, BAD datasets
+- Attack types: Human-crafted, coreference, escalation
+- Compared open- and closed-source LLMs for safety, severity, and attack cost
+
 ## References
 
 - [MHJ: LLM Defenses Are Not Robust to Multi-Turn Human Jailbreaks Yet](https://arxiv.org/abs/2408.15221)
