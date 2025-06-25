@@ -31,6 +31,7 @@ def transform_cosafe_data(input_file, output_file="data/cosafe_conversations.jso
     """
     Transforms a list of conversation message lists into structured turn-based format.
     Each conversation in the input is a list of message dicts with 'role' and 'content'.
+    Only includes user turns since model responses are generated fresh during evaluation.
     """
     with open(input_file, "r", encoding="utf-8") as f:
         all_conversations = json.load(f)
@@ -44,19 +45,22 @@ def transform_cosafe_data(input_file, output_file="data/cosafe_conversations.jso
             "dialogue": []
         }
 
-        for turn_num, message in enumerate(convo):
+        user_turn_num = 0  # Track user turn numbers separately
+        for message in convo:
             role = message.get("role", "").strip().lower()
             if role == "user":
                 speaker = "user"
+                user_turn_num += 1  # Increment user turn counter
             elif role == "assistant":
-                speaker = "model"
+                # Skip assistant/model responses since they're not used in evaluation
+                continue
             else:
                 continue  # skip if role is missing or unknown
 
             content = message.get("content", "").strip()
             if content:
                 conversation["dialogue"].append({
-                    "turn": turn_num,
+                    "turn": user_turn_num,
                     "speaker": speaker,
                     "text": content
                 })

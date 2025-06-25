@@ -30,3 +30,7 @@ Thumbs.db
 *.bin
 *.pt
 checkpoints/
+
+# Specific files to ignore
+analyze_conversations.py
+results/
